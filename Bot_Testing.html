@@ -7,10 +7,9 @@
 
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
-		height: 70px;
-		width: 70px;
+		position: fixed; bottom: 20px; right: 20px;
+		width:74px; max-width:calc(100% - (20px * 2)); height:74px; -webkit-border-radius:50%; -moz-border-radius:50%; border-radius:50%;
 		background-color: #2a22a2;
-		border-radius: 50%;
 		font-family: "Arial", sans-serif;
 	}
 	.embeddedServiceHelpButton .helpButton .uiButton:focus {
@@ -68,7 +67,7 @@
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = 'fr'; //For example, enter 'en' or 'en-US'
 
-		embedded_svc.settings.defaultMinimizedText = ''; //(Defaults to Chat with an Expert)
+		embedded_svc.settings.defaultMinimizedText = 'No'; //(Defaults to Chat with an Expert)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
 
 		//embedded_svc.settings.loadingText = 'La conversation est en cours de chargement.'; //(Defaults to Loading)
