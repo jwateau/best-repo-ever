@@ -6,7 +6,7 @@
 <div>Hello World!</div>
 
 <div id="chatDiv" class="chatDiv">
-<img id="chatImg" src="https://fr.virbac.com/modules/virbac-static-resources-module/img/content/virbac-logo-228x112.png" alt="chat bot button" onclick="bootstrapChat()" />
+<img id="chatImg" alt="chat bot button" onclick="bootstrapChat()" />
 </div>
 	
 <style type='text/css'>
@@ -53,7 +53,7 @@
 	
 	.chatButton { padding: 2%; display:block; background-color: #005290; color: white; text-align:center; border-radius: 5px; font-size: 100%; border-style: none; }
 	.chatButton:hover { background-color: #DCDCDC; color: #005290; }	
-	.chatDiv { transition: box-shadow .3s; margin: 50px; border-radius:10px; border: 1px solid #ccc; background: #fff; float: left; position: absolute; bottom: 10px; right: 10px; }
+	.chatDiv { position: fixed; bottom: 20px; right: 20px; width:74px; height:74px; -webkit-border-radius:50%; -moz-border-radius:50%; border-radius:50%; background-color: #1371c3; }
 	.chatDiv:hover { box-shadow: 0 0 30px rgba(33,33,33); }
 </style>
 
