@@ -5,8 +5,8 @@
 <body>
 <div>Hello World!</div>
 
-<div id="chatDiv" class="embeddedServiceHelpButton" onclick="bootstrapChat()">
-<!-- <img id="chatImg" alt="chat bot button" onclick="bootstrapChat()" /> -->
+<div id="chatDiv" class="chatDiv">
+<img id="chatImg" alt="chat bot button" onclick="bootstrapChat()" />
 </div>
 	
 <style type='text/css'>
@@ -71,6 +71,11 @@
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = false
+		embedded_svc.addEventHandler("afterDestroy", function(data) {
+                                console.log("afterDestroy event was fired. ");
+                                          var div = document.getElementById('chatDiv');
+                                          div.style.display = 'block';
+                            });
 		embedded_svc.settings.language = 'fr'; //For example, enter 'en' or 'en-US'
 
 		embedded_svc.settings.defaultMinimizedText = ' '; //(Defaults to Chat with an Expert)
