@@ -14,19 +14,9 @@ function bootstrapChat() {
 <div>Hello World!</div>
 
 <div id="chatDiv" class="chatDiv">
-	<img src="https://image.email.virbac.com/lib/fe3011717564047b721177/m/1/964586eb-0c4d-4fc5-8190-9d01abd260f7.png" height="64px" width="64px" onclick="bootstrapChat()">
+	<img src="https://image.email.virbac.com/lib/fe3011717564047b721177/m/1/fc7ed9dc-a4b9-48ed-b27b-4b1d2b0c045b.png" onclick="bootstrapChat()">
 </div>
-	
-<style type='text/css'>
-	.embeddedServiceHelpButton .helpButton .uiButton {
-		position: fixed; bottom: 20px; right: 20px;
-		width:74px; height:74px; -webkit-border-radius:50%; -moz-border-radius:50%; border-radius:50%;
-		background-color: #1371c3;
-	}
-	.embeddedServiceHelpButton .helpButton .uiButton:focus {
-		outline: 1px solid #1371c3;
-	}
-</style>
+
 
 	
 <!-- Start of Invitations -->
@@ -59,14 +49,11 @@ function bootstrapChat() {
 	.embeddedServiceInvitationFooter > .embeddedServiceActionButton { font-size: 14px; max-height: 40px; border: none; border-radius: 4px; padding: 10px; margin: 4px; text-align: center; text-decoration: none; display: inline-block; cursor: pointer; }
 	.embeddedServiceInvitationFooter > #acceptInvite { background-color: #1371c3; color: #FFFFFF; padding: 0.5em 5em; align: center; font-weight: bold;}
 	.embeddedServiceInvitationFooter > #rejectInvite { background-color: #FFFFFF; color: #005290; }
-	.chatDiv {
-    		width: 64px;
-		height: 64px;
-		border-radius: 50%;
-		background-color: transparent;
+	.chatDiv { width: 64px; height: 64px; border-radius: 50%; background-color: transparent;
 		color: #ffffff; outline: 0; border: none; box-shadow: 2px 2px 5px 0 rgb(45 45 45 / 50%); text-align: center; overflow: hidden; z-index: 2; cursor: default;
 		position: absolute; bottom: 15px; right: 15px;
               }
+	.chatDiv:hover { cursor: pointer; }
 </style>
 
 <script type='text/javascript'>
@@ -84,21 +71,10 @@ function bootstrapChat() {
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = false;
 		embedded_svc.settings.language = 'fr';
-
 		embedded_svc.settings.defaultMinimizedText = ' '; //(Defaults to Chat with an Expert)
-		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
-
 		embedded_svc.settings.loadingText = 'La conversation est en cours de chargement.'; //(Defaults to Loading)
-		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
-
-		// Settings for Chat
-		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
-		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
-
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
-
 		embedded_svc.init(
 			'https://virbac--partial.sandbox.my.salesforce.com',
 			'https://virbac--partial.sandbox.my.site.com/serviceconso',
