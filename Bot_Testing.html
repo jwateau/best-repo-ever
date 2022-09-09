@@ -13,9 +13,9 @@ function bootstrapChat() {
 <body>
 <div>Hello World!</div>
 
-<button id="chatDiv" class="chatDiv" onclick="bootstrapChat()">
-	<img src="https://image.email.virbac.com/lib/fe3011717564047b721177/m/1/964586eb-0c4d-4fc5-8190-9d01abd260f7.png" height="64" width="64">
-</button>
+<div id="chatDiv" class="chatDiv">
+	<img src="https://image.email.virbac.com/lib/fe3011717564047b721177/m/1/964586eb-0c4d-4fc5-8190-9d01abd260f7.png" height="64px" width="64px" onclick="bootstrapChat()">
+</div>
 	
 <style type='text/css'>
 	.embeddedServiceHelpButton .helpButton .uiButton {
@@ -49,7 +49,7 @@ function bootstrapChat() {
 	.embeddedServiceInvitation > .embeddedServiceInvitationHeader { width: inherit; height: 10px; line-height: 10px; color: #FFFFFF; background-color: #00000; overflow: initial; display: flex; align-items: right; border-top-left-radius: 8px; border-top-right-radius: 8px; }
 	.embeddedServiceInvitationHeader #embeddedServiceAvatar { width: 32px; height: 32px; border-radius: 50%; }
 	.embeddedServiceInvitationHeader .embeddedServiceTitleText { font-size: 18px; color: #FFFFFF; overflow: hidden; word-wrap: normal; white-space: nowrap; text-overflow: ellipsis; align-self: stretch; flex-grow: 1; max-width: 100%; margin: 0 12px; }
-	.embeddedServiceInvitationHeader .embeddedServiceCloseIcon { border: none; border-radius: 3px; cursor: pointer; position: relative; bottom: 3%; right: 3%; background-color: transparent; width: 32px; height: 32px; font-size: 23px; color: #A1A1A1; }
+	.embeddedServiceInvitationHeader .embeddedServiceCloseIcon { border: none; border-radius: 3px; cursor: pointer; position: absolute; right: -2px; background-color: transparent; width: 32px; height: 32px; font-size: 23px; color: #A1A1A1; }
 	.embeddedServiceInvitationHeader .embeddedServiceCloseIcon:focus { outline: none; }
 	.embeddedServiceInvitationHeader .embeddedServiceCloseIcon:focus::before { content: " "; position: absolute; top: 11%; left: 7%; width: 85%; height: 85%; background-color: rgba(255, 255, 255, 0.2); border-radius: 4px; pointer-events: none; }
 	.embeddedServiceInvitationHeader .embeddedServiceCloseIcon:active, .embeddedServiceCloseIcon:hover { background-color: #FFFFFF; color: rgba(0,0,0,0.7); opacity: 0.7; }
@@ -63,9 +63,9 @@ function bootstrapChat() {
     		width: 64px;
 		height: 64px;
 		border-radius: 50%;
-		background-color: #1371c3;
+		background-color: transparent;
 		color: #ffffff; outline: 0; border: none; box-shadow: 2px 2px 5px 0 rgb(45 45 45 / 50%); text-align: center; overflow: hidden; z-index: 2; cursor: default;
-		position: absolute; bottom: 10px; right: 10px;
+		position: absolute; bottom: 15px; right: 15px;
               }
 </style>
 
