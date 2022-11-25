@@ -1,0 +1,117 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+</head>
+<script>
+function bootstrapChat() {
+              embedded_svc.bootstrapEmbeddedService();
+              var div = document.getElementById('chatDiv');
+              div.style.display = 'none';
+}
+</script>
+	
+<body>
+<div>Hello World!</div>
+
+<div id="chatDiv" class="chatDiv">
+	<img src="https://image.email.virbac.com/lib/fe3011717564047b721177/m/1/fc7ed9dc-a4b9-48ed-b27b-4b1d2b0c045b.png" onclick="bootstrapChat()">
+</div>
+
+
+	
+<!-- Start of Invitations -->
+<div class="embeddedServiceInvitation" id="snapins_invite" inert="true" aria-live="assertive" role="dialog" aria-atomic="true">
+	<div class="embeddedServiceInvitationHeader" aria-labelledby="snapins_titletext" aria-describedby="snapins_bodytext">
+		<button type="button" id="closeInvite" class="embeddedServiceCloseIcon" aria-label="Exit invitation">&times;</button>
+	</div>
+	<div class="embeddedServiceInvitationBody">
+		<p id="snapins_bodytext">SANTÉ URINAIRE DU CHAT,<br>QUELLE ALIMENTATION ?</p>
+	</div>
+	<div class="embeddedServiceInvitationFooter" aria-describedby="snapins_bodytext">
+		<button type="button" class="embeddedServiceActionButton" id="acceptInvite">Je fais le test !</button>
+	</div>
+</div>
+
+<style type='text/css'>
+	#snapins_invite { background-color: #FFFFFF; font-family: "Arial", sans-serif; overflow: visible; border-radius: 8px; visibility: hidden;  margin-left: -330px;  margin-top: -230px; }
+	.embeddedServiceInvitation { background-color: transparent; max-width: 290px; max-height: 210px; -webkit-box-shadow: 0 7px 12px rgba(0,0,0,0.28); -moz-box-shadow: 0 7px 12px rgba(0,0,0,0.28); box-shadow: 0 7px 12px rgba(0,0,0,0.28); }
+	@media only screen and (min-width: 48em) { /*mobile*/ .embeddedServiceInvitation { max-width: 332px; max-height: 210px; } }
+	.embeddedServiceInvitation > .embeddedServiceInvitationHeader { width: inherit; height: 10px; line-height: 10px; color: #FFFFFF; background-color: #00000; overflow: initial; display: flex; align-items: right; border-top-left-radius: 8px; border-top-right-radius: 8px; }
+	.embeddedServiceInvitationHeader #embeddedServiceAvatar { width: 32px; height: 32px; border-radius: 50%; }
+	.embeddedServiceInvitationHeader .embeddedServiceTitleText { font-size: 18px; color: #FFFFFF; overflow: hidden; word-wrap: normal; white-space: nowrap; text-overflow: ellipsis; align-self: stretch; flex-grow: 1; max-width: 100%; margin: 0 12px; }
+	.embeddedServiceInvitationHeader .embeddedServiceCloseIcon { border: none; border-radius: 3px; cursor: pointer; position: absolute; right: -2px; background-color: transparent; width: 32px; height: 32px; font-size: 23px; color: #A1A1A1; }
+	.embeddedServiceInvitationHeader .embeddedServiceCloseIcon:focus { outline: none; }
+	.embeddedServiceInvitationHeader .embeddedServiceCloseIcon:focus::before { content: " "; position: absolute; top: 11%; left: 7%; width: 85%; height: 85%; background-color: rgba(255, 255, 255, 0.2); border-radius: 4px; pointer-events: none; }
+	.embeddedServiceInvitationHeader .embeddedServiceCloseIcon:active, .embeddedServiceCloseIcon:hover { background-color: #FFFFFF; color: rgba(0,0,0,0.7); opacity: 0.7; }
+	.embeddedServiceInvitation > .embeddedServiceInvitationBody { background-color: #FFFFFF; max-height: 110px; min-width: 260px; margin: 0 8px; font-size: 14px; line-height: 20px; overflow: auto; }
+	.embeddedServiceInvitationBody p { font-weight: bold; color: #A1A1A1; padding: 4px; margin: 4px 0; text-align: center; }
+	.embeddedServiceInvitation > .embeddedServiceInvitationFooter { width: inherit; color: #FFFFFF; text-align: right; background-color: #FFFFFF; padding: 10px; max-height: 50px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; }
+	.embeddedServiceInvitationFooter > .embeddedServiceActionButton { font-size: 14px; max-height: 40px; border: none; border-radius: 4px; padding: 10px; margin: 4px; text-align: center; text-decoration: none; display: inline-block; cursor: pointer; }
+	.embeddedServiceInvitationFooter > #acceptInvite { background-color: #1371c3; color: #FFFFFF; padding: 0.5em 5em; align: center; font-weight: bold;}
+	.embeddedServiceInvitationFooter > #rejectInvite { background-color: #FFFFFF; color: #005290; }
+	.chatDiv { width: 74px; height: 74px; border-radius: 50%; background-color: 1371c3;
+		color: #ffffff; outline: 0; border: none; box-shadow: 2px 2px 5px 0 rgb(45 45 45 / 50%); text-align: center; overflow: hidden; z-index: 2; cursor: default;
+		position: absolute; bottom: 30px; right: 40px;
+              }
+	.chatDiv:hover { cursor: pointer; }
+</style>
+
+<script type='text/javascript'>
+	(function() {
+		document.getElementById('closeInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.rejectInvite(); };
+		//document.getElementById('rejectInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.rejectInvite(); }; // use this API call to reject invitations
+		document.getElementById('acceptInvite').onclick = function() { embedded_svc.inviteAPI.inviteButton.acceptInvite(); }; // use this API call to start chat from invitations
+		document.addEventListener('keyup', function(event) { if (event.keyCode == 27) { embedded_svc.inviteAPI.inviteButton.rejectInvite(); }})
+	})();
+</script>
+<!-- End of Invitations -->
+
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript'>
+	var initESW = function(gslbBaseURL) {
+		embedded_svc.settings.displayHelpButton = false;
+		embedded_svc.settings.language = 'fr';
+		embedded_svc.settings.defaultMinimizedText = ' '; //(Defaults to Chat with an Expert)
+		embedded_svc.settings.loadingText = 'La conversation est en cours de chargement.'; //(Defaults to Loading)
+		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
+		embedded_svc.settings.entryFeature = 'LiveAgent';
+		embedded_svc.init(
+			'https://virbac.my.salesforce.com',
+			'https://virbac.force.com/serviceconso',
+			gslbBaseURL,
+			'00D1t000000DJLm',
+			'Virbac_Bot',
+			{
+				baseLiveAgentContentURL: 'https://c.la3-c1-cdg.salesforceliveagent.com/content',
+				deploymentId: '5726N000000sXuy',
+				buttonId: '5736N000000wk2x',
+				baseLiveAgentURL: 'https://d.la3-c1-cdg.salesforceliveagent.com/chat',
+				eswLiveAgentDevName: 'Virbac_Bot',
+				isOfflineSupportEnabled: true
+			}
+		);
+		 embedded_svc.addEventHandler("afterDestroy", function(data) {
+			 console.log("afterDestroy event was fired. ");
+			 var div = document.getElementById('chatDiv');
+			 div.style.display = 'block';
+			 });
+		embedded_svc.addEventHandler("onInviteAccepted", function(data) {
+            	console.log("onInviteAccepted event was fired. ");
+            	var div = document.getElementById('chatDiv');
+            	div.style.display = 'none';
+        });
+	};
+
+	if (!window.embedded_svc) {
+		var s = document.createElement('script');
+		s.setAttribute('src', 'https://virbac.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.onload = function() {
+			initESW(null);
+		};
+		document.body.appendChild(s);
+	} else {
+		initESW('https://service.force.com');
+	}
+</script>
+</body>
+</html>
